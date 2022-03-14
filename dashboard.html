@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link rel="stylesheet" href="assets/vendor/icofont/icofont.min.css">
+  <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- MyCss -->
+  <link rel="stylesheet" href="assets/css/myCss.css">
+</head>
+
+<body>
+  <div class="sidebar close">
+    <div class="logo-details">
+      <img src="assets/img/doit-2.png" alt="">
+      <!-- <span class="logo_name">CodingLab</span> -->
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt' ></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Dashboard</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-collection' ></i>
+            <span class="link_name">Report</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Report</a></li>
+          <li><a href="#">Report 1</a></li>
+          <li><a href="#">Report 2</a></li>
+          <li><a href="#">Report 3</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <section class="dashboard-section">
+    <section class="dashboard-header">
+      <div class="title-header">
+        <i class='bx bx-menu' ></i>
+        <span class="text">Dashboard</span>
+      </div>
+
+      <div class="icon-header">
+        <img src="assets/img/icon/user-icon.svg" alt="">
+        <div>
+          <span>Admin</span>
+          <p>User</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="dashboard-body">
+      <div class="main-header">
+        <div class="calender">
+          <div>
+            <span class="time"></span>
+            <span class="date"></span>
+            <span class="year"></span>
+          </div>
+          <i class='bx bx-calendar'></i>
+        </div>
+        <a href="index.html">
+          <button id="logout-dashboard">Logout <i class="icofont-logout"></i></button>
+        </a>
+      </div>
+
+      <section class="main-body">
+        <section id="dashboard-content">
+          <div class="pallet-pa card">
+            <div>
+              <h3>Total Pallet PA</h3>
+              <h1>1000</h1>
+            </div>
+            <div>
+              <img src="assets/img/icon/pallet-icon.svg" alt="">
+            </div>
+          </div>
+          <div class="pallet-ss card">
+            <div>
+              <h3>Total Pallet SS</h3>
+              <h1>2000</h1>
+            </div>
+            <div>
+              <img src="assets/img/icon/pallet-icon.svg" alt="">
+            </div>
+          </div>
+          <div class="card">
+            <div style="width:40%">
+              <canvas id="myChart"></canvas>
+            </div>
+
+            <div>
+              <h2>DISTRIBUTION PALLET</h2>
+              <ul>
+                <li><i class='bx bxs-checkbox luar-area'></i>Luar Area Warehouse</li>
+                <li><i class='bx bxs-checkbox dalam-area'></i>Dalam Area Warehouse</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="ket-total">
+              <div>
+                <img src="assets/img/icon/ket-total1.svg" alt="">
+              </div>
+              <div>
+                <p>Warehouse 1</p>
+                <span>800</span>
+              </div>
+            </div>
+            <div class="ket-total">
+              <div>
+                <img src="assets/img/icon/ket-total2.svg" alt="">
+              </div>
+              <div>
+                <p>Warehouse 2</p>
+                <span>500</span>
+              </div>
+            </div>
+            <div class="ket-total">
+              <div>
+                <img src="assets/img/icon/ket-total3.svg" alt="">
+              </div>
+              <div>
+                <p>Loading Dock WH2</p>
+                <span>300</span>
+              </div>
+            </div>
+            <div class="ket-total">
+              <div>
+                <img src="assets/img/icon/ket-total4.svg" alt="">
+              </div>
+              <div>
+                <p>Timbang</p>
+                <span>600</span>
+              </div>
+            </div>
+            <div class="ket-total">
+              <div>
+                <img src="assets/img/icon/ket-total5.svg" alt="">
+              </div>
+              <div>
+                <p>Produksi Kemas</p>
+                <span>550</span>
+              </div>
+            </div>
+            <div class="ket-total">
+              <div>
+                <img src="assets/img/icon/ket-total6.svg" alt="">
+              </div>
+              <div>
+                <p>Produksi Proses</p>
+                <span>320</span>
+              </div>
+            </div>
+            <div class="ket-total">
+              <div>
+                <img src="assets/img/icon/ket-total7.svg" alt="">
+              </div>
+              <div>
+                <p>Vendor</p>
+                <span>1000</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+      
+  </section>
+
+</body>
+
+<script src="assets/vendor/chart-js/chart.min.js"></script>
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script src="assets/js/myChart.js"></script>
+<script src="assets/js/myJs.js"></script>
+</html>
